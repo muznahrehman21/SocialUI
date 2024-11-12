@@ -1,8 +1,15 @@
 import React, { useState } from 'react';
 import { FaCamera } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import Page1 from './Page1';
 import Page2 from './Page2';
-const ProfileScreen = () => {
+// code push at github
+// raw css
+// react redux
+// axios.get axios.post axios.put axios.delete
+
+
+const ProfileScreen = () => { 
   const [showOptions, setShowOptions] = useState(false);
   const [page, setPage] = useState('ProfileScreen');
   const renderScreen = () => {
@@ -11,8 +18,8 @@ const ProfileScreen = () => {
         return <Page1 />
       case 'page2':
         return <Page2 />
-        default:
-          return <ProfileScreen/>
+      default:
+        return <ProfileScreen />
     }
 
   }
@@ -23,7 +30,6 @@ const ProfileScreen = () => {
         <div className="w-full h-full flex items-center justify-center text-gray-500">
           <span>No Image</span>
         </div>
-
 
         <button
           className="absolute bottom-0 right-0 bg-white rounded-full p-2 border border-gray-300"
@@ -60,18 +66,22 @@ const ProfileScreen = () => {
 
       <button className="text-2xl mb-5 w-10 h-10 rounded-full border-2 bg-blue-400 border-blue-400 items-center">+</button>
       <div className="flex gap-3 mb-5">
-        <button className="p-2 rounded-md h-15 border-2 bg-blue-400 border-blue-400" onClick={() => {
-          console.log('page 1')
-          setPage('page1')
-        }}>1st Page</button>
-        <button className="p-2 rounded-md h-15 border-2 bg-blue-400 border-blue-400">2nd Page</button>
+        
+          <Link to="/page1" >
+          <button className="p-2 rounded-md h-15 border-2 bg-blue-400 border-blue-400" >
+          1st Page</button>
+          </Link>
+          <Link to="/page2" >
+          <button className="p-2 rounded-md h-15 border-2 bg-blue-400 border-blue-400" >
+          2nd Page</button>
+          </Link>
       </div>
       <div className="flex flex-col items-center text-center">
         <p className="border-2 border-gray-400 p-3">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem facere quis corrupti totam excepturi nostrum neque, labore quas harum a mollitia consectetur incidunt voluptatem illo, sed, explicabo ducimus recusandae quibusdam iusto sunt eveniet ullam?
         </p>
       </div>
-      
+
     </div>
   );
 };
