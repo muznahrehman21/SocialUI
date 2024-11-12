@@ -1,10 +1,14 @@
-import React from 'react'
+import React from 'react';
+import '../style/Page1.css';
+
+
 
 const Page1 = () => {
   return (
-    <div className='flex items-center h-screen justify-center'>
-      <h1 className='text-2xl font-bold '>This is Page1</h1></div>
-  )
+    <div className="page-container">
+      <h1 className="page-title">This is Page1</h1>
+    </div>
+  );
 }
 
-export default Page1
+export default Page1;

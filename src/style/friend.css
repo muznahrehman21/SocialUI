@@ -1,0 +1,48 @@
+/* FriendRequestScreen.css */
+
+/* General Flexbox Styling */
+.flex {
+    display: flex;
+  }
+  
+  .flex-col {
+    flex-direction: column;
+  }
+  
+  .items-center {
+    align-items: center;
+  }
+  
+  .p-5 {
+    padding: 1.25rem;
+  }
+  
+  /* Friend Request Item Container */
+  .friend-request-item {
+    margin-bottom: 0.75rem;
+    width: 100%;
+    max-width: 20rem; /* Equivalent to max-w-xs */
+    padding: 1rem; /* Equivalent to p-4 */
+    border: 1px solid #d1d5db; /* Equivalent to border-gray-300 */
+    border-radius: 0.5rem; /* Equivalent to rounded-lg */
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Request Text Styling */
+  .request-text {
+    flex: 1; /* Takes available space to push buttons to the right */
+  }
+  
+  /* Button Styling */
+  .button {
+    margin-left: 0.5rem;
+    padding: 0.25rem 0.75rem;
+    border: 2px solid #63b3ed; /* Equivalent to border-blue-400 */
+    border-radius: 0.375rem; /* Equivalent to rounded-md */
+    background-color: #63b3ed; /* Equivalent to bg-blue-400 */
+    color: white;
+  }
+  

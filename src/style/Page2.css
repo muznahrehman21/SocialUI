@@ -1,0 +1,12 @@
+
+.page2-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.page2-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}

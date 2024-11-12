@@ -3,17 +3,14 @@ import { FaCamera } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import Page1 from './Page1';
 import Page2 from './Page2';
-// code push at github
-// raw css
-// react redux
-// axios.get axios.post axios.put axios.delete
-
+import '../style/profile.css';
 
 const ProfileScreen = () => { 
   const [showOptions, setShowOptions] = useState(false);
   const [page, setPage] = useState('ProfileScreen');
+  
   const renderScreen = () => {
-    switch (setPage) {
+    switch (page) {
       case 'page1':
         return <Page1 />
       case 'page2':
@@ -21,28 +18,25 @@ const ProfileScreen = () => {
       default:
         return <ProfileScreen />
     }
+  };
 
-  }
   return (
     <div className="flex flex-col items-center text-center">
-      <div className="relative w-24 h-24 border-2 border-gray-400 rounded-full flex items-center justify-center overflow-hidden mb-10 bg-gray-200">
-
-        <div className="w-full h-full flex items-center justify-center text-gray-500">
+      <div className="profile-image-container">
+        <div className="no-image-text">
           <span>No Image</span>
         </div>
-
         <button
-          className="absolute bottom-0 right-0 bg-white rounded-full p-2 border border-gray-300"
+          className="camera-button"
           onClick={() => setShowOptions((prev) => !prev)}
         >
-          <FaCamera className="text-gray-600" />
+          <FaCamera className="camera-icon" />
         </button>
 
-
         {showOptions && (
-          <div className="absolute top-0 right-0 mt-12 z-50 bg-red-200 border border-red-500 rounded-md shadow-lg p-2 w-32">
+          <div className="options-dropdown">
             <button
-              className="text-gray-700 block px-3 py-1 text-sm hover:bg-gray-100 w-full text-left"
+              className="options-button"
               onClick={() => {
                 console.log("Add Photo Clicked");
                 setShowOptions(false);
@@ -51,7 +45,7 @@ const ProfileScreen = () => {
               Add Photo
             </button>
             <button
-              className="text-gray-700 block px-3 py-1 text-sm hover:bg-gray-100 w-full text-left"
+              className="options-button"
               onClick={() => {
                 console.log("Remove Photo Clicked");
                 setShowOptions(false);
@@ -63,25 +57,22 @@ const ProfileScreen = () => {
         )}
       </div>
 
-
-      <button className="text-2xl mb-5 w-10 h-10 rounded-full border-2 bg-blue-400 border-blue-400 items-center">+</button>
+      <button className="add-button">+</button>
+      
       <div className="flex gap-3 mb-5">
-        
-          <Link to="/page1" >
-          <button className="p-2 rounded-md h-15 border-2 bg-blue-400 border-blue-400" >
-          1st Page</button>
-          </Link>
-          <Link to="/page2" >
-          <button className="p-2 rounded-md h-15 border-2 bg-blue-400 border-blue-400" >
-          2nd Page</button>
-          </Link>
+        <Link to="/page1">
+          <button className="nav-button">1st Page</button>
+        </Link>
+        <Link to="/page2">
+          <button className="nav-button">2nd Page</button>
+        </Link>
       </div>
+
       <div className="flex flex-col items-center text-center">
-        <p className="border-2 border-gray-400 p-3">
+        <p className="content-paragraph">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem facere quis corrupti totam excepturi nostrum neque, labore quas harum a mollitia consectetur incidunt voluptatem illo, sed, explicabo ducimus recusandae quibusdam iusto sunt eveniet ullam?
         </p>
       </div>
-
     </div>
   );
 };
