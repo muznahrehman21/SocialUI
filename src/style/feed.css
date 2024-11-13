@@ -1,6 +1,4 @@
-/* FeedScreen.css */
 
-/* General Flexbox Styling */
 .flex {
     display: flex;
   }
@@ -14,18 +12,17 @@
   }
   
   .p-5 {
-    padding: 1.25rem; /* Equivalent to p-5 */
+    padding: 20px; 
   }
   
-  /* Card Container Styling */
+
   .card {
     width: 100%;
-    max-width: 20rem; /* Equivalent to max-w-80 */
-    padding: 1.25rem; /* Equivalent to p-5 */
+    max-width: 20rem; 
     border-style: solid;
     border-color: black;
     border-width: 2px;
-    margin: 1.25rem; /* Equivalent to m-5 */
+    margin: 1.25rem; 
     text-align: left;
   }
   
